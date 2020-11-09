@@ -1,6 +1,6 @@
 COMPILER=clang++
 EXEC=bmanip
-COMPILATION_FLAGS=-Wall -MMD -stdlib=libc++ -I src/include
+COMPILATION_FLAGS=-Wall -MMD -stdlib=libc++
 LINKER_FLAGS=-lc++abi -lc++
 CPPSTANDARD=c++17
 
@@ -11,13 +11,13 @@ TESTDIR=./test
 
 MAIN_OBJ=main.o
 MAIN_PATH=$(call addprefix, ${OBJDIR}/, ${MAIN_OBJ})
-OTHER_OBJS=main.o bin_to_ascii_transform.o ascii_to_bin_transform.o
+OTHER_OBJS=main.o streamer.o bin_to_ascii_transform.o ascii_to_bin_transform.o
 OTHER_PATHS=$(call addprefix, ${OBJDIR}/, ${OTHER_OBJS})
 
 OBJECTPATHS=${MAIN_PATH} ${OTHER_PATHS}
 DEPENDSPATHS=${OBJECTPATHS:.o=.d}
 
-.PHONY: clean debug compile link test warn error silent _silent info symbols
+.PHONY: clean compile link prod
 
 ${EXEC}: compile link
 -include ${DEPENDSPATHS}

@@ -1,20 +1,20 @@
 #ifndef TRANSFORM_H
 #define TRANSFORM_H
 
+#include "streamer.h"
+
 #include <iostream>
 
 class Transform 
 {
-	std::ostream &out;
-	std::istream &in;
+	Streamer streamer;
 public:
-	Transform(std::istream & in, std::ostream &out):
-	out {out},
-	in{in} {}
+	Transform(std::istream &in, std::ostream &out, bool formatted):
+	streamer(in, out, formatted) {}
 
 	void process()
 	{
-		while (!in.fail())
+		while (!streamer.fail())
 		{
 			getAndWriteByte();
 		}
@@ -23,8 +23,8 @@ public:
 	virtual ~Transform() {};
 
 protected:
-	std::ostream &Out() { return out; }
-	std::istream &In() { return in; }
+	Streamer &Out() { return streamer; }
+	Streamer &In() { return streamer; }
 
 private:
 	virtual void getAndWriteByte() = 0;

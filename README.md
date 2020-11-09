@@ -23,6 +23,7 @@
 | :----: | :---: |
 | `-o` / `--output` | Specify output file format | 
 | `-i` / `--input` | Specify input file format |
+| `-f` / `--format` | Format Output |
 
 ```bash
 bmanip -o <output type> -i <input type>  < input/file/path

@@ -5,8 +5,8 @@
 class AsciiToBinTransform final : public Transform
 {
 public:
-	AsciiToBinTransform(std::istream &in, std::ostream &out):
-	Transform(in, out) {}
+	AsciiToBinTransform(std::istream &in, std::ostream &out, bool formatted):
+	Transform(in, out, formatted) {}
 
 private:
 	void getAndWriteByte() override;
