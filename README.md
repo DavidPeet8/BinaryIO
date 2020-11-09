@@ -7,12 +7,12 @@
 - Not suggested to try to make meaningful changes to a binary file with this tool
 
 ### Supported Modes 
-1. Bin --> Ascii
+1. Bin to Ascii
 - Binary is interpreted **one bit at a time**, each bit is converted to ascii and then output
 
 > The binary file with contents 0b00101 will be translated the ascii string "00101"
 
-2. Ascii --> Bin
+2. Ascii to Bin
 - Ascii is interpreted as binary where each ASCII character corresponds to **one bit** of binary
 
 > The string "0001011" in as ASCII will be translated to the binary file with contents 0b0001011
