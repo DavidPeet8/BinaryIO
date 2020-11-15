@@ -5,6 +5,7 @@
 #include "ascii_as_bin_to_bin_transform.h"
 #include "ascii_as_hex_to_bin_transform.h"
 #include "bin_to_bin_as_ascii_transform.h"
+#include "bin_to_hex_as_ascii_transform.h"
 #include "transform.h"
 
 using namespace std;
@@ -69,6 +70,8 @@ int main(int argc, char **argv) {
     transform.reset(new AsciiAsBinToBinTransform(in, out, args.format));
   } else if (args.it == Type::ASCII_HEX && args.ot == Type::BIN) {
     transform.reset(new AsciiAsHexToBinTransform(in, out, args.format));
+  } else if (args.it == Type::BIN && args.ot == Type::ASCII_HEX) {
+    transform.reset(new BinToHexAsAsciiTransform(in, out, args.format));
   } else {
     cout << "Unsupported I/O config." << endl;
     exit(1);

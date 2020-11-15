@@ -10,6 +10,8 @@ class BinToBinAsAsciiTransform final : public Transform {
   BinToBinAsAsciiTransform(std::istream &in, std::ostream &out, bool formatted)
       : Transform(in, out, formatted) {}
 
+  ~BinToBinAsAsciiTransform() { Out() << '\n'; }
+
  private:
   void getAndWriteByte() override;
 };
