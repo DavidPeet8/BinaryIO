@@ -1,3 +1,6 @@
+#ifndef ASCII_AS_BIN_TO_BIN_TRANSFORM_H
+#define ASCII_AS_BIN_TO_BIN_TRANSFORM_H
+
 #include <iostream>
 
 #include "transform.h"
@@ -10,3 +13,4 @@ class AsciiAsBinToBinTransform final : public Transform {
  private:
   void getAndWriteByte() override;
 };
+#endif

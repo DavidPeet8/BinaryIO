@@ -2,6 +2,10 @@
 
 #include "streamer.h"
 
+namespace {
+unsigned getBinDig(char c) { return c == '1' ? '1' : '0'; }
+}  // namespace
+
 void AsciiAsBinToBinTransform::getAndWriteByte() {
   char res = 0;
   char c = 0;
@@ -13,8 +17,8 @@ void AsciiAsBinToBinTransform::getAndWriteByte() {
 
     In() >> c;
     if (!isspace(c)) {
-      res *= 2;
-      res += (c == '0' ? 0 : 1);
+      res <<= 1;
+      res += getBinDig(c);
       i++;
     }
   }

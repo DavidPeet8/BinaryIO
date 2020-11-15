@@ -3,12 +3,13 @@
 #include <string>
 
 #include "ascii_as_bin_to_bin_transform.h"
+#include "ascii_as_hex_to_bin_transform.h"
 #include "bin_to_bin_as_ascii_transform.h"
 #include "transform.h"
 
 using namespace std;
 
-enum class Type { BIN, ASCII };  // What format to ouput data as
+enum class Type { BIN, ASCII_BIN, ASCII_HEX };  // What format to ouput data as
 
 struct Args {
   Type it;  // input type
@@ -20,7 +21,9 @@ Type getType(const string &str) {
   if (str == "bin") {
     return Type::BIN;
   } else if (str == "ascii") {
-    return Type::ASCII;
+    return Type::ASCII_BIN;
+  } else if (str == "hex") {
+    return Type::ASCII_HEX;
   } else {
     throw "unrecognized type";
   }
@@ -60,10 +63,15 @@ int main(int argc, char **argv) {
   std::istream &in = cin;
   std::ostream &out = cout;
 
-  if (args.it == Type::BIN && args.ot == Type::ASCII) {
+  if (args.it == Type::BIN && args.ot == Type::ASCII_BIN) {
     transform.reset(new BinToBinAsAsciiTransform(in, out, args.format));
-  } else if (args.it == Type::ASCII && args.ot == Type::BIN) {
+  } else if (args.it == Type::ASCII_BIN && args.ot == Type::BIN) {
     transform.reset(new AsciiAsBinToBinTransform(in, out, args.format));
+  } else if (args.it == Type::ASCII_HEX && args.ot == Type::BIN) {
+    transform.reset(new AsciiAsHexToBinTransform(in, out, args.format));
+  } else {
+    cout << "Unsupported I/O config." << endl;
+    exit(1);
   }
 
   transform->process();
