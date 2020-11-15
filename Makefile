@@ -11,7 +11,7 @@ TESTDIR=./test
 
 MAIN_OBJ=main.o
 MAIN_PATH=$(call addprefix, ${OBJDIR}/, ${MAIN_OBJ})
-OTHER_OBJS=main.o streamer.o bin_to_ascii_transform.o ascii_to_bin_transform.o
+OTHER_OBJS=main.o streamer.o bin_to_bin_as_ascii_transform.o ascii_as_bin_to_bin_transform.o
 OTHER_PATHS=$(call addprefix, ${OBJDIR}/, ${OTHER_OBJS})
 
 OBJECTPATHS=${MAIN_PATH} ${OTHER_PATHS}
@@ -40,7 +40,7 @@ prod: ${EXEC}
 compile: $(OBJECTPATHS)
 	@echo Compiled
 
-link: 
+link:
 	${COMPILER} ${OBJDIR}/*.o -o ${EXEC} ${LINKER_FLAGS}
 	@echo Linking Complete
 
