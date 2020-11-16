@@ -1,3 +1,4 @@
 bmanip
 *.o
 *.d
+build/*
