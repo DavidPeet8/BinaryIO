@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/transforms/include/streamer.h
+iostream
+-
+
+/home/david/Programming/Projects/binary_reader/src/transforms/common/bin_utils.cc
+
+/home/david/Programming/Projects/binary_reader/src/transforms/streamers/streamer.cc
+streamer.h
+/home/david/Programming/Projects/binary_reader/src/transforms/streamers/streamer.h
+

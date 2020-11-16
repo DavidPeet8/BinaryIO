@@ -1,0 +1,1 @@
+/usr/bin/clang++-10 -Wall -MMD -stdlib=libc++ -g -rdynamic CMakeFiles/bmanip.dir/main.cc.o -o bmanip  transforms/libtransforms.a 

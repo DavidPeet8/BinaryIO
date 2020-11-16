@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/david/Programming/Projects/binary_reader/build/src",
+  "command": "/usr/bin/clang++-10  -I/home/david/Programming/Projects/binary_reader/src/include -I/home/david/Programming/Projects/binary_reader/src/transforms/include -Wall -MMD -stdlib=libc++ -g -std=gnu++17 -o CMakeFiles/bmanip.dir/main.cc.o -c /home/david/Programming/Projects/binary_reader/src/main.cc",
+  "file": "/home/david/Programming/Projects/binary_reader/src/main.cc"
+},
+{
+  "directory": "/home/david/Programming/Projects/binary_reader/build/src/transforms",
+  "command": "/usr/bin/clang++-10  -I/home/david/Programming/Projects/binary_reader/src/transforms/include -Wall -MMD -stdlib=libc++ -g -std=gnu++17 -o CMakeFiles/transforms.dir/streamers/streamer.cc.o -c /home/david/Programming/Projects/binary_reader/src/transforms/streamers/streamer.cc",
+  "file": "/home/david/Programming/Projects/binary_reader/src/transforms/streamers/streamer.cc"
+},
+{
+  "directory": "/home/david/Programming/Projects/binary_reader/build/src/transforms",
+  "command": "/usr/bin/clang++-10  -I/home/david/Programming/Projects/binary_reader/src/transforms/include -Wall -MMD -stdlib=libc++ -g -std=gnu++17 -o CMakeFiles/transforms.dir/common/bin_utils.cc.o -c /home/david/Programming/Projects/binary_reader/src/transforms/common/bin_utils.cc",
+  "file": "/home/david/Programming/Projects/binary_reader/src/transforms/common/bin_utils.cc"
+},
+{
+  "directory": "/home/david/Programming/Projects/binary_reader/build/src/transforms",
+  "command": "/usr/bin/clang++-10  -I/home/david/Programming/Projects/binary_reader/src/transforms/include -Wall -MMD -stdlib=libc++ -g -std=gnu++17 -o CMakeFiles/transforms.dir/binary_reader_transforms/bin_to_bin_as_ascii_transform.cc.o -c /home/david/Programming/Projects/binary_reader/src/transforms/binary_reader_transforms/bin_to_bin_as_ascii_transform.cc",
+  "file": "/home/david/Programming/Projects/binary_reader/src/transforms/binary_reader_transforms/bin_to_bin_as_ascii_transform.cc"
+},
+{
+  "directory": "/home/david/Programming/Projects/binary_reader/build/src/transforms",
+  "command": "/usr/bin/clang++-10  -I/home/david/Programming/Projects/binary_reader/src/transforms/include -Wall -MMD -stdlib=libc++ -g -std=gnu++17 -o CMakeFiles/transforms.dir/binary_reader_transforms/bin_to_hex_as_ascii_transform.cc.o -c /home/david/Programming/Projects/binary_reader/src/transforms/binary_reader_transforms/bin_to_hex_as_ascii_transform.cc",
+  "file": "/home/david/Programming/Projects/binary_reader/src/transforms/binary_reader_transforms/bin_to_hex_as_ascii_transform.cc"
+},
+{
+  "directory": "/home/david/Programming/Projects/binary_reader/build/src/transforms",
+  "command": "/usr/bin/clang++-10  -I/home/david/Programming/Projects/binary_reader/src/transforms/include -Wall -MMD -stdlib=libc++ -g -std=gnu++17 -o CMakeFiles/transforms.dir/binary_writer_transforms/ascii_as_bin_to_bin_transform.cc.o -c /home/david/Programming/Projects/binary_reader/src/transforms/binary_writer_transforms/ascii_as_bin_to_bin_transform.cc",
+  "file": "/home/david/Programming/Projects/binary_reader/src/transforms/binary_writer_transforms/ascii_as_bin_to_bin_transform.cc"
+},
+{
+  "directory": "/home/david/Programming/Projects/binary_reader/build/src/transforms",
+  "command": "/usr/bin/clang++-10  -I/home/david/Programming/Projects/binary_reader/src/transforms/include -Wall -MMD -stdlib=libc++ -g -std=gnu++17 -o CMakeFiles/transforms.dir/binary_writer_transforms/ascii_as_hex_to_bin_transform.cc.o -c /home/david/Programming/Projects/binary_reader/src/transforms/binary_writer_transforms/ascii_as_hex_to_bin_transform.cc",
+  "file": "/home/david/Programming/Projects/binary_reader/src/transforms/binary_writer_transforms/ascii_as_hex_to_bin_transform.cc"
+}
+]

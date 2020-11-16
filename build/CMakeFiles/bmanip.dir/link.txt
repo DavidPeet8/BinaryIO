@@ -1,0 +1,1 @@
+/usr/bin/clang++-10 -g -rdynamic CMakeFiles/bmanip.dir/main.cpp.o -o bmanip 
