@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # set the project name
 # sets PROJECT_NAME variable - name in parentheses
 # only in toplevel CMakeLists.txt
-project(bmanip)
+project(bio)
 
 add_subdirectory(src)
 include(CPack)

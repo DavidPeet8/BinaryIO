@@ -21,7 +21,7 @@ struct Args {
 Type getType(const string &str) {
   if (str == "bin") {
     return Type::BIN;
-  } else if (str == "ascii") {
+  } else if (str == "hrbin") {
     return Type::ASCII_BIN;
   } else if (str == "hex") {
     return Type::ASCII_HEX;
