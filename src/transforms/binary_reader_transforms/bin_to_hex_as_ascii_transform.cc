@@ -3,7 +3,8 @@
 #include "bin_utils.h"
 #include "streamer.h"
 
-void BinToHexAsAsciiTransform::getAndWriteByte() {
+void BinToHexAsAsciiTransform::readAndTransformByte(bool inRange)
+{
   unsigned char c = 0;
   In() >> c;
   if (In().fail()) {
@@ -13,8 +14,8 @@ void BinToHexAsAsciiTransform::getAndWriteByte() {
   c = (c << 4) + (c >> 4);
 
   for (int i = 0; i < 2; i++) {
-    Out() << BinUtils::getHexChar(c % 16);
+    if (inRange) Out() << BinUtils::getHexChar(c % 16);
     c /= 16;
   }
-  Out() << ' ';
+  if (inRange) Out() << ' ';
 }

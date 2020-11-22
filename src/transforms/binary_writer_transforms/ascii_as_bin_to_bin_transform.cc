@@ -3,13 +3,18 @@
 #include "bin_utils.h"
 #include "streamer.h"
 
-namespace {
-unsigned getBinDig(char c) { return c == '1' ? 1 : 0; }
+namespace
+{
+unsigned getBinDig(char c)
+{
+  return c == '1' ? 1 : 0;
+}
 }  // namespace
 
-void AsciiAsBinToBinTransform::getAndWriteByte() {
+void AsciiAsBinToBinTransform::getAndWriteByte(bool inRange)
+{
   unsigned char res = 0;
-  unsigned char c = 0;
+  unsigned char c   = 0;
 
   for (int i = 7; i >= 0;) {
     if (In().fail()) {
@@ -23,5 +28,5 @@ void AsciiAsBinToBinTransform::getAndWriteByte() {
     }
   }
 
-  Out() << res;
+  if (inRange) Out() << res;
 }

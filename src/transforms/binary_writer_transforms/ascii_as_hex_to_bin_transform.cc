@@ -3,18 +3,20 @@
 #include "bin_utils.h"
 #include "streamer.h"
 
-namespace {
-
-void addHexSequence(char c, char &res) {
+namespace
+{
+void addHexSequence(char c, char &res)
+{
   res <<= 4;
   res += BinUtils::getHexDigit(c);
 }
 
 }  // namespace
 
-void AsciiAsHexToBinTransform::getAndWriteByte() {
+void AsciiAsHexToBinTransform::getAndWriteByte(bool InRange)
+{
   char res = 0;
-  char c = 0;
+  char c   = 0;
 
   for (int i = 0; i < 2;) {
     if (In().fail()) {
@@ -27,5 +29,6 @@ void AsciiAsHexToBinTransform::getAndWriteByte() {
       i++;
     }
   }
-  Out() << res;
+
+  if (InRange) Out() << res;
 }

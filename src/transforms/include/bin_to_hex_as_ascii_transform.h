@@ -5,12 +5,14 @@
 
 #include "binary_reader_transform.h"
 
-class BinToHexAsAsciiTransform final : public BinaryReaderTransform {
- public:
-  BinToHexAsAsciiTransform(std::istream &in, std::ostream &out, bool formatted)
-      : BinaryReaderTransform(in, out, formatted) {}
+class BinToHexAsAsciiTransform final : public BinaryReaderTransform
+{
+public:
+  BinToHexAsAsciiTransform(std::istream &in, std::ostream &out, bool formatted) :
+      BinaryReaderTransform(in, out, formatted)
+  {}
 
- private:
-  void getAndWriteByte() override;
+private:
+  void readAndTransformByte(bool inRange) override;
 };
 #endif

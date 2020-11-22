@@ -2,3 +2,4 @@ bmanip
 *.o
 *.d
 build/*
+core

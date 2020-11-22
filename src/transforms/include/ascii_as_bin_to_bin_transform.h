@@ -5,12 +5,14 @@
 
 #include "binary_writer_transform.h"
 
-class AsciiAsBinToBinTransform final : public BinaryWriterTransform {
- public:
-  AsciiAsBinToBinTransform(std::istream &in, std::ostream &out, bool formatted)
-      : BinaryWriterTransform(in, out, formatted) {}
+class AsciiAsBinToBinTransform final : public BinaryWriterTransform
+{
+public:
+  AsciiAsBinToBinTransform(std::istream &in, std::ostream &out, bool formatted) :
+      BinaryWriterTransform(in, out, formatted)
+  {}
 
- private:
-  void getAndWriteByte() override;
+private:
+  void getAndWriteByte(bool inRange) override;
 };
 #endif
