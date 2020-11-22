@@ -5,6 +5,17 @@
 - Designed to assist developers of binary file formats & others working closely with them
 - `bio` is intended to **decouple the reading and the writing** of binary files for easier debugging
 
+## Building BIO
+
+1. `cd` to the project root directory
+2. Run the following bash commands
+```bash
+cd build
+cmake ..
+make
+```
+3. The executable will be installed under `build/src`
+
 ## Usaage & Options
 
 `bio` will read from `stdin` and will output to `stdout`, I/O redirection is done via shell I/O redirection
@@ -26,6 +37,9 @@ bio -o output_type -i input_type < input/file/path > output/file/path
 | :----: | :---: |
 | `-o` / `--output` | Specify output file format |
 | `-i` / `--input` | Specify input file format |
+| `-f` | Format output |
+| `-s` | Specify start address to read to / address to start writing at (inclusive) |
+| `-e` | Specify end address for reading / address to end writing at (inclusive) |
 
 ---
 
