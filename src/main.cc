@@ -109,6 +109,7 @@ Args parseArgs(int argc, char **argv)
 // In BIN, out ASCII --> Out spits out streem of ascii 0's and 1's
 // In ASCII, out BIN --> Assume all ascii chars are 0s or 1s and output the
 // binary
+// TODO: Add an installer for this
 int main(int argc, char **argv)
 {
   Args args                            = parseArgs(argc, argv);
